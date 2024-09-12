@@ -1,0 +1,938 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+ <LINK REL="STYLESHEET" TYPE="text/css" HREF="plsqldoc.css">
+ <TITLE>Package api_pub_themes</TITLE>
+ <META name="object" content="PACKAGE">
+ <META name="name" content="api_pub_themes">
+ <META name="description" content="API-Package for table pub_themes">
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%"><TR>
+<TD><P ALIGN="LEFT"><STRONG><SMALL></SMALL></STRONG></TD>
+<TD><P ALIGN="RIGHT"><STRONG><SMALL><A HREF="index.html">index</A></SMALL></STRONG></TD>
+</TR></TABLE>
+<TABLE CLASS="MAIN_TABLE"><TR><TD CLASS="DESC_TEXT">
+<P CLASS="MAIN_TITLE">Package api_pub_themes</P>
+API-Package for table pub_themes<br>
+
+<BR>
+</TD></TR></TABLE>
+<HR>
+<A NAME="Program units"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Program units
+</TD></TR></TABLE>
+<TABLE CLASS="SUB_TABLE">
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#ins_pub_themes">ins_pub_themes</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Inserts dataset in pub_themes
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#upd_pub_themes">upd_pub_themes</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Updates datset of table pub_themes
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#del_pub_themes">del_pub_themes</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Deletes dataset of table pub_themes
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#get_rec_pub_themes">get_rec_pub_themes</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Get record of table pub_themes
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#get_md5_pub_themes">get_md5_pub_themes</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Generates md5 checksum for pub_themes
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#do_check_md5_pub_themes">do_check_md5_pub_themes</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Compares (Before/After) md5 checksum for pub_themes
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#get_id_pub_themes">get_id_pub_themes</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Get id_pub_themes of pub_themes
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#get_id_usr">get_id_usr</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Get id_usr of pub_themes
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#get_theme_name">get_theme_name</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Get theme_name of pub_themes
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#get_preview_img">get_preview_img</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Get preview_img of pub_themes
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#get_game_daymode">get_game_daymode</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Get game_daymode of pub_themes
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#get_game_bird_color">get_game_bird_color</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Get game_bird_color of pub_themes
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#get_game_treetop_color">get_game_treetop_color</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Get game_treetop_color of pub_themes
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#get_game_treetrunk_color">get_game_treetrunk_color</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Get game_treetrunk_color of pub_themes
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#get_game_bottom_color">get_game_bottom_color</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Get game_bottom_color of pub_themes
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#get_game_grass_color">get_game_grass_color</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Get game_grass_color of pub_themes
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#get_game_bar_color">get_game_bar_color</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Get game_bar_color of pub_themes
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#do_insert_pub_theme">do_insert_pub_theme</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Insert public theme from usr and return Goto URL
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#set_pub_theme_current">set_pub_theme_current</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Set public theme as current usr theme
+</TD></TR>
+</TABLE>
+<BR>
+<A NAME="Types"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Types
+</TD></TR></TABLE>
+<TABLE CLASS="SUB_TABLE">
+<TR><TD VALIGN="TOP" CLASS="TYPE_ITEM">
+<A HREF="#pub_rec_pub_themes_type">pub_rec_pub_themes_type</A>&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Record for pub_themes
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="pub_rec_pub_themes_type"></A>
+<P CLASS="TYPE_TITLE">
+pub_rec_pub_themes_type
+</P>
+<PRE CLASS="DECL_TEXT">
+TYPE pub_rec_pub_themes_type IS RECORD(
+  id_pub_themes        pub_themes.id_pub_themes%TYPE,
+  id_usr               pub_themes.id_usr%TYPE,
+  theme_name           pub_themes.theme_name%TYPE,
+  preview_img          pub_themes.preview_img%TYPE,
+  game_daymode         pub_themes.game_daymode%TYPE,
+  game_bird_color      pub_themes.game_bird_color%TYPE,
+  game_treetop_color   pub_themes.game_treetop_color%TYPE,
+  game_treetrunk_color pub_themes.game_treetrunk_color%TYPE,
+  game_bottom_color    pub_themes.game_bottom_color%TYPE,
+  game_grass_color     pub_themes.game_grass_color%TYPE,
+  game_bar_color       pub_themes.game_bar_color%TYPE);
+</PRE>
+<P CLASS="DESC_TEXT">
+Record for pub_themes<br>
+
+<BR>
+</P>
+<HR>
+<A NAME="ins_pub_themes"></A>
+<P CLASS="TYPE_TITLE">
+ins_pub_themes
+</P>
+<PRE CLASS="DECL_TEXT">
+FUNCTION <A HREF="api_pub_themes.body.html#ins_pub_themes">ins_pub_themes</A>(i_rec_pub_themes IN <A HREF=#pub_rec_pub_themes_type>pub_rec_pub_themes_type</A>)
+  RETURN pub_themes.id_pub_themes%TYPE
+
+</PRE>
+<P CLASS="DESC_TEXT">
+Inserts dataset in pub_themes<br>
+
+<BR>
+</P>
+<A NAME="Parameters"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Parameters
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_rec_pub_themes&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Record-Type of table<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<A NAME="Returns"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Returns
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+ID (PK of dataset)<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="upd_pub_themes"></A>
+<P CLASS="TYPE_TITLE">
+upd_pub_themes
+</P>
+<PRE CLASS="DECL_TEXT">
+PROCEDURE <A HREF="api_pub_themes.body.html#upd_pub_themes">upd_pub_themes</A>(i_rec_pub_themes IN <A HREF=#pub_rec_pub_themes_type>pub_rec_pub_themes_type</A>,
+                         i_checksum       IN VARCHAR2 := NULL)
+
+</PRE>
+<P CLASS="DESC_TEXT">
+Updates datset of table pub_themes<br>
+
+<BR>
+</P>
+<A NAME="Parameters"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Parameters
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_rec_pub_themes&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Record-Type of pub_themes<br>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_checksum&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Checksumme md5 before<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="del_pub_themes"></A>
+<P CLASS="TYPE_TITLE">
+del_pub_themes
+</P>
+<PRE CLASS="DECL_TEXT">
+PROCEDURE <A HREF="api_pub_themes.body.html#del_pub_themes">del_pub_themes</A>(i_id_pub_themes IN pub_themes.id_pub_themes%TYPE)
+
+</PRE>
+<P CLASS="DESC_TEXT">
+Deletes dataset of table pub_themes<br>
+
+<BR>
+</P>
+<A NAME="Parameters"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Parameters
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_id_pub_themes&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+PK-ID of pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="get_rec_pub_themes"></A>
+<P CLASS="TYPE_TITLE">
+get_rec_pub_themes
+</P>
+<PRE CLASS="DECL_TEXT">
+FUNCTION <A HREF="api_pub_themes.body.html#get_rec_pub_themes">get_rec_pub_themes</A>(i_id_pub_themes IN pub_themes.id_pub_themes%TYPE)
+  RETURN <A HREF=#pub_rec_pub_themes_type>pub_rec_pub_themes_type</A>
+
+</PRE>
+<P CLASS="DESC_TEXT">
+Get record of table pub_themes<br>
+
+<BR>
+</P>
+<A NAME="Parameters"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Parameters
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_id_pub_themes&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+ID aus pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<A NAME="Returns"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Returns
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Record-Type for pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="get_md5_pub_themes"></A>
+<P CLASS="TYPE_TITLE">
+get_md5_pub_themes
+</P>
+<PRE CLASS="DECL_TEXT">
+FUNCTION <A HREF="api_pub_themes.body.html#get_md5_pub_themes">get_md5_pub_themes</A>(i_rec_pub_themes IN <A HREF=#pub_rec_pub_themes_type>pub_rec_pub_themes_type</A>)
+  RETURN VARCHAR2
+
+</PRE>
+<P CLASS="DESC_TEXT">
+Generates md5 checksum for pub_themes<br>
+
+<BR>
+</P>
+<A NAME="Parameters"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Parameters
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_rec_pub_themes&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Record-Type of table<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<A NAME="Returns"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Returns
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+md5 Checksum in Varchar2<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="do_check_md5_pub_themes"></A>
+<P CLASS="TYPE_TITLE">
+do_check_md5_pub_themes
+</P>
+<PRE CLASS="DECL_TEXT">
+FUNCTION <A HREF="api_pub_themes.body.html#do_check_md5_pub_themes">do_check_md5_pub_themes</A>(i_checksum       IN VARCHAR2,
+                                 i_rec_pub_themes IN <A HREF=#pub_rec_pub_themes_type>pub_rec_pub_themes_type</A>)
+  RETURN BOOLEAN
+
+</PRE>
+<P CLASS="DESC_TEXT">
+Compares (Before/After) md5 checksum for pub_themes<br>
+
+<BR>
+</P>
+<A NAME="Parameters"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Parameters
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_checksum&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+checksum before<br>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_rec_pub_themes&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Record-Type of table<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<A NAME="Returns"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Returns
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Boolean value<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="get_id_pub_themes"></A>
+<P CLASS="TYPE_TITLE">
+get_id_pub_themes
+</P>
+<PRE CLASS="DECL_TEXT">
+FUNCTION <A HREF="api_pub_themes.body.html#get_id_pub_themes">get_id_pub_themes</A>(i_id_pub_themes IN pub_themes.id_pub_themes%TYPE)
+  RETURN pub_themes.id_pub_themes%TYPE
+
+</PRE>
+<P CLASS="DESC_TEXT">
+Get id_pub_themes of pub_themes<br>
+
+<BR>
+</P>
+<A NAME="Parameters"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Parameters
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_id_pub_themes&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Id der pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<A NAME="Returns"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Returns
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+id_pub_themes aus pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="get_id_usr"></A>
+<P CLASS="TYPE_TITLE">
+get_id_usr
+</P>
+<PRE CLASS="DECL_TEXT">
+FUNCTION <A HREF="api_usr.html#get_id_usr">get_id_usr</A>(i_id_pub_themes IN pub_themes.id_pub_themes%TYPE)
+  RETURN pub_themes.id_usr%TYPE
+
+</PRE>
+<P CLASS="DESC_TEXT">
+Get id_usr of pub_themes<br>
+
+<BR>
+</P>
+<A NAME="Parameters"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Parameters
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_id_pub_themes&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Id der pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<A NAME="Returns"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Returns
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+id_usr aus pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="get_theme_name"></A>
+<P CLASS="TYPE_TITLE">
+get_theme_name
+</P>
+<PRE CLASS="DECL_TEXT">
+FUNCTION <A HREF="api_pub_themes.body.html#get_theme_name">get_theme_name</A>(i_id_pub_themes IN pub_themes.id_pub_themes%TYPE)
+  RETURN pub_themes.theme_name%TYPE
+
+</PRE>
+<P CLASS="DESC_TEXT">
+Get theme_name of pub_themes<br>
+
+<BR>
+</P>
+<A NAME="Parameters"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Parameters
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_id_pub_themes&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Id der pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<A NAME="Returns"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Returns
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+theme_name aus pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="get_preview_img"></A>
+<P CLASS="TYPE_TITLE">
+get_preview_img
+</P>
+<PRE CLASS="DECL_TEXT">
+FUNCTION <A HREF="api_pub_themes.body.html#get_preview_img">get_preview_img</A>(i_id_pub_themes IN pub_themes.id_pub_themes%TYPE)
+  RETURN pub_themes.preview_img%TYPE
+
+</PRE>
+<P CLASS="DESC_TEXT">
+Get preview_img of pub_themes<br>
+
+<BR>
+</P>
+<A NAME="Parameters"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Parameters
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_id_pub_themes&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Id der pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<A NAME="Returns"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Returns
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+preview_img aus pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="get_game_daymode"></A>
+<P CLASS="TYPE_TITLE">
+get_game_daymode
+</P>
+<PRE CLASS="DECL_TEXT">
+FUNCTION <A HREF="api_usr_prefs.html#get_game_daymode">get_game_daymode</A>(i_id_pub_themes IN pub_themes.id_pub_themes%TYPE)
+  RETURN pub_themes.game_daymode%TYPE
+
+</PRE>
+<P CLASS="DESC_TEXT">
+Get game_daymode of pub_themes<br>
+
+<BR>
+</P>
+<A NAME="Parameters"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Parameters
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_id_pub_themes&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Id der pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<A NAME="Returns"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Returns
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+game_daymode aus pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="get_game_bird_color"></A>
+<P CLASS="TYPE_TITLE">
+get_game_bird_color
+</P>
+<PRE CLASS="DECL_TEXT">
+FUNCTION <A HREF="api_usr_prefs.html#get_game_bird_color">get_game_bird_color</A>(i_id_pub_themes IN pub_themes.id_pub_themes%TYPE)
+  RETURN pub_themes.game_bird_color%TYPE
+
+</PRE>
+<P CLASS="DESC_TEXT">
+Get game_bird_color of pub_themes<br>
+
+<BR>
+</P>
+<A NAME="Parameters"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Parameters
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_id_pub_themes&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Id der pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<A NAME="Returns"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Returns
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+game_bird_color aus pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="get_game_treetop_color"></A>
+<P CLASS="TYPE_TITLE">
+get_game_treetop_color
+</P>
+<PRE CLASS="DECL_TEXT">
+FUNCTION <A HREF="api_usr_prefs.html#get_game_treetop_color">get_game_treetop_color</A>(i_id_pub_themes IN pub_themes.id_pub_themes%TYPE)
+  RETURN pub_themes.game_treetop_color%TYPE
+
+</PRE>
+<P CLASS="DESC_TEXT">
+Get game_treetop_color of pub_themes<br>
+
+<BR>
+</P>
+<A NAME="Parameters"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Parameters
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_id_pub_themes&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Id der pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<A NAME="Returns"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Returns
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+game_treetop_color aus pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="get_game_treetrunk_color"></A>
+<P CLASS="TYPE_TITLE">
+get_game_treetrunk_color
+</P>
+<PRE CLASS="DECL_TEXT">
+FUNCTION <A HREF="api_usr_prefs.html#get_game_treetrunk_color">get_game_treetrunk_color</A>(i_id_pub_themes IN pub_themes.id_pub_themes%TYPE)
+  RETURN pub_themes.game_treetrunk_color%TYPE
+
+</PRE>
+<P CLASS="DESC_TEXT">
+Get game_treetrunk_color of pub_themes<br>
+
+<BR>
+</P>
+<A NAME="Parameters"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Parameters
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_id_pub_themes&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Id der pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<A NAME="Returns"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Returns
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+game_treetrunk_color aus pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="get_game_bottom_color"></A>
+<P CLASS="TYPE_TITLE">
+get_game_bottom_color
+</P>
+<PRE CLASS="DECL_TEXT">
+FUNCTION <A HREF="api_usr_prefs.html#get_game_bottom_color">get_game_bottom_color</A>(i_id_pub_themes IN pub_themes.id_pub_themes%TYPE)
+  RETURN pub_themes.game_bottom_color%TYPE
+
+</PRE>
+<P CLASS="DESC_TEXT">
+Get game_bottom_color of pub_themes<br>
+
+<BR>
+</P>
+<A NAME="Parameters"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Parameters
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_id_pub_themes&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Id der pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<A NAME="Returns"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Returns
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+game_bottom_color aus pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="get_game_grass_color"></A>
+<P CLASS="TYPE_TITLE">
+get_game_grass_color
+</P>
+<PRE CLASS="DECL_TEXT">
+FUNCTION <A HREF="api_usr_prefs.html#get_game_grass_color">get_game_grass_color</A>(i_id_pub_themes IN pub_themes.id_pub_themes%TYPE)
+  RETURN pub_themes.game_grass_color%TYPE
+
+</PRE>
+<P CLASS="DESC_TEXT">
+Get game_grass_color of pub_themes<br>
+
+<BR>
+</P>
+<A NAME="Parameters"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Parameters
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_id_pub_themes&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Id der pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<A NAME="Returns"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Returns
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+game_grass_color aus pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="get_game_bar_color"></A>
+<P CLASS="TYPE_TITLE">
+get_game_bar_color
+</P>
+<PRE CLASS="DECL_TEXT">
+FUNCTION <A HREF="api_usr_prefs.html#get_game_bar_color">get_game_bar_color</A>(i_id_pub_themes IN pub_themes.id_pub_themes%TYPE)
+  RETURN pub_themes.game_bar_color%TYPE
+
+</PRE>
+<P CLASS="DESC_TEXT">
+Get game_bar_color of pub_themes<br>
+
+<BR>
+</P>
+<A NAME="Parameters"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Parameters
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_id_pub_themes&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+Id der pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<A NAME="Returns"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Returns
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+game_bar_color aus pub_themes<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="do_insert_pub_theme"></A>
+<P CLASS="TYPE_TITLE">
+do_insert_pub_theme
+</P>
+<PRE CLASS="DECL_TEXT">
+FUNCTION <A HREF="api_pub_themes.body.html#do_insert_pub_theme">do_insert_pub_theme</A>(i_id_usr      IN pub_themes.id_usr%TYPE,
+                             i_theme_name  pub_themes.theme_name%TYPE,
+                             i_preview_img pub_themes.preview_img%TYPE)
+  RETURN VARCHAR2
+
+</PRE>
+<P CLASS="DESC_TEXT">
+Insert public theme from usr and return Goto URL<br>
+
+<BR>
+</P>
+<A NAME="Parameters"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Parameters
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_id_usr&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_theme_name&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_preview_img&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+</TABLE>
+<BR>
+<A NAME="Returns"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Returns
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+URL as varchar2<br>
+
+</TD></TR>
+</TABLE>
+<BR>
+<HR>
+<A NAME="set_pub_theme_current"></A>
+<P CLASS="TYPE_TITLE">
+set_pub_theme_current
+</P>
+<PRE CLASS="DECL_TEXT">
+PROCEDURE <A HREF="api_pub_themes.body.html#set_pub_theme_current">set_pub_theme_current</A>(i_id_usr        IN pub_themes.id_usr%TYPE,
+                                i_id_pub_themes IN pub_themes.id_pub_themes%TYPE)
+
+</PRE>
+<P CLASS="DESC_TEXT">
+Set public theme as current usr theme<br>
+
+<BR>
+</P>
+<A NAME="Parameters"></A>
+<TABLE CLASS="LIST_TABLE"><TR><TD CLASS="LIST_TITLE">
+Parameters
+</TD></TR></TABLE>
+<TABLE CLASS="LIST_TABLE">
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_id_usr&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+<TR><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+</TD><TD VALIGN="TOP" CLASS="LIST_ITEM" WIDTH=1%>
+i_id_pub_themes&nbsp;&nbsp;
+</TD><TD CLASS="DESC_TEXT" WIDTH=95%>
+
+</TD></TR>
+</TABLE>
+<BR>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+</BODY>
+</HTML>
